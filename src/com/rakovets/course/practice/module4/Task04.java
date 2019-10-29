@@ -27,5 +27,11 @@ public class Task04 {
 		//TODO
 		// Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
 		// Для проверки решения необходимо запустить @Test для данного class (в директории test)
+		double buffer = healthPoints;
+		for(int i = 0; i < hoursAfterRespawn; i++){
+			buffer = buffer + buffer*regenerationPercentFromCurrentHealth*0.01;
+		}
+		healthPoints = (int) buffer;
+		System.out.println(healthPoints);
 	}
 }

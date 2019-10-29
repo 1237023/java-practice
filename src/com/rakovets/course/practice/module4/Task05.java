@@ -26,5 +26,20 @@ public class Task05 {
 		//TODO
 		// Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
 		// Для проверки решения необходимо запустить @Test для данного class (в директории test)
+		double buffer = healthPoints;
+		int i;
+		for(i = 0; i < 100; i++){
+			buffer = buffer + buffer*regenerationPercentFromCurrentHealth*0.01 - averageDamagePerHour;
+			if(i >= 24){
+				i = -2;
+				break;
+			}
+			if (buffer < 0){
+				break;
+			}
+
+		}
+		System.out.println(i+1);
+
 	}
 }
