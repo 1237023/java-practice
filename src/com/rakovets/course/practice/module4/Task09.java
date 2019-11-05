@@ -30,5 +30,16 @@ public class Task09 {
 		//TODO
 		// Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
 		// Для проверки решения необходимо запустить @Test для данного class (в директории test)
+		int temporaryNumbers = startNumberItems;
+		double temporaryPrices = startPriceAllItems;
+		for (int i = 0; i < sizeTotalPrice; i++){
+			System.out.print(temporaryNumbers + " - " + (temporaryPrices - temporaryPrices*i/100) + " with sell " + i*1.0 + "%");
+			temporaryNumbers = temporaryNumbers + differentialNumberItems;
+			temporaryPrices = temporaryPrices + startPriceAllItems*differentialNumberItems/startNumberItems;
+			if (i != sizeTotalPrice-1){
+				System.out.println();
+
+			}
+		}
 	}
 }
