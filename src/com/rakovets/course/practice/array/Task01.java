@@ -16,7 +16,6 @@ public class Task01 extends StandardInputTask {
 		// Ввод данных осуществляется в Standard Input, для проверки различных вариантов входных параметров
 		int countMarks = INPUT_SCANNER.nextInt();
 		int[] marks = nextArray(countMarks);
-
 		// Вызов методов
 		getAverageMark(marks);
 		getMinMark(marks);
@@ -32,7 +31,11 @@ public class Task01 extends StandardInputTask {
 		//TODO
 		// Код, решающий задачу пишем ниже, при этом используя параметры метода
 		// Для проверки решения необходимо запустить @Test для данного class (в директории test)
-		return 0.0;
+		double averageMark = 0;
+		for (int i = 0; i < marks.length; i++){
+			averageMark = averageMark + marks[i];
+		}
+		return Math.round((averageMark/marks.length)*100)/100.0;
 	}
 
 	/**
@@ -44,7 +47,9 @@ public class Task01 extends StandardInputTask {
 		//TODO
 		// Код, решающий задачу пишем ниже, при этом используя параметры метода
 		// Для проверки решения необходимо запустить @Test для данного class (в директории test)
-		return 0;
+		Arrays.sort(marks);
+		int i = marks[0];
+		return i;
 	}
 
 	/**
@@ -56,7 +61,9 @@ public class Task01 extends StandardInputTask {
 		//TODO
 		// Код, решающий задачу пишем ниже, при этом используя параметры метода
 		// Для проверки решения необходимо запустить @Test для данного class (в директории test)
-		return 0;
+		Arrays.sort(marks);
+		int i = marks[(marks.length)-1];
+		return i;
 	}
 
 	private static int[] nextArray(int countMarks) {
