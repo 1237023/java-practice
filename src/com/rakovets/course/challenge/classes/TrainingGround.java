@@ -15,9 +15,9 @@ public class TrainingGround {
         jack.attackEnemy(zombie);
         System.out.println("getting zombies health: " + zombie.getHealth());
         System.out.println("checking whether zombie is alive: " + zombie.isAlive());
-        Enemy zombie1 = new Zombie(50);
-        Enemy zombie2 = new Zombie(50);
-        Enemy zombie3 = new Zombie(50);
+        Zombie zombie1 = new Zombie(50);
+        Zombie zombie2 = new Zombie(50);
+        Zombie zombie3 = new Zombie(50);
         duke.superAttackEnemy(zombie1);
         System.out.println("getting zombie1 health: " + zombie1.getHealth());
         System.out.println("checking whether zombie1 is alive: " + zombie1.isAlive());
@@ -25,7 +25,7 @@ public class TrainingGround {
         System.out.println("getting zombie1 health: " + zombie1.getHealth());
         System.out.println("checking whether zombie1 is alive: " + zombie1.isAlive());
         System.out.println(((Zombie)zombie1).getRessurectionHealth());
-        ((Zombie) zombie1).ressurection();
+        zombie1.ressurection();
         /*
         метд ressurecton меняет health zombie, в то время как герои снимают health enemy
          */

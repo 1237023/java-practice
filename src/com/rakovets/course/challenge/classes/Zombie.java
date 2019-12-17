@@ -1,13 +1,10 @@
 package com.rakovets.course.challenge.classes;
 
 public class Zombie extends Enemy {
-
-    double health;
-    double ressurectionHealth;
+    private double ressurectionHealth;
 
     Zombie(double health) {
         super(health);
-        this.health = health;
         this.ressurectionHealth = health/2;
     }
 
@@ -16,7 +13,7 @@ public class Zombie extends Enemy {
     }
 
     public void ressurection() {
-        this.health = getRessurectionHealth();
+        super.health = getRessurectionHealth();
         this.ressurectionHealth = getRessurectionHealth() / 2;
         System.out.println("I have ressurected!!!!");
     }
